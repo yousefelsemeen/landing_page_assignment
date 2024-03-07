@@ -136,6 +136,14 @@ header a {
   position: absolute;
 }
 
+.sliderItem p {
+  font-size: 50px;
+  z-index: 2;
+  position: relative;
+  right: 90px;
+  color: rgb(38, 85, 174);
+}
+
 .sliderImg {
   z-index: 1;
   height: 80%;
@@ -144,21 +152,36 @@ header a {
 .sliderItem:nth-child(1) .slideBg {
   background-color: rgb(222, 201, 201);
 }
+.sliderItem:nth-child(1) p {
+  background-color: rgb(177, 142, 142);
+}
 
 .sliderItem:nth-child(2) .slideBg {
   background-color: rgb(104, 181, 181);
+}
+.sliderItem:nth-child(2) p {
+  background-color: rgb(64, 144, 168);
 }
 
 .sliderItem:nth-child(3) .slideBg {
   background-color: rgb(175, 151, 200);
 }
+.sliderItem:nth-child(3) p {
+  background-color: rgb(163, 111, 174);
+}
 
 .sliderItem:nth-child(4) .slideBg {
   background-color: rgb(184, 205, 243);
 }
+.sliderItem:nth-child(4) p {
+  background-color: rgb(133, 168, 234);
+}
 
 .sliderItem:nth-child(5) .slideBg {
   background-color: rgb(207, 189, 165);
+}
+.sliderItem:nth-child(5) p {
+  background-color: rgb(169, 148, 39);
 }
 
 .selectedItem {
