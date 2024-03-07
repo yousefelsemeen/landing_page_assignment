@@ -29,6 +29,10 @@ header img {
   margin-left: 10px;
 }
 
+header nav {
+  display: flex;
+}
+
 header ul {
   margin-right: 10px;
   display: flex;
@@ -44,34 +48,41 @@ header a {
 
 /* make the unordered list transform into a hamburger menu on smaller screens */
 @media (max-width: 768px) {
-  header ul {
+  header nav::before {
+    z-index: 3;
+    content: "";
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: block;
+    border: none;
+    padding: 0px;
+    margin: 10px;
+    background: linear-gradient(
+      to bottom,
+      black,
+      black 30%,
+      white 30%,
+      white 40%,
+      black 40%,
+      black 60%,
+      white 60%,
+      white 70%,
+      black 70%,
+      black 100%
+    );
+  }
+
+  header nav ul {
     position: absolute;
-    top: 80px;
-    background-color: #999;
-    width: 100%;
-    height: 100vh;
+    display: none;
+    justify-content: flex-start;
     flex-direction: column;
-    clip-path: circle(0px at top right);
-    transition: all 0.5s ease;
-  }
-
-  header ul.active {
-    clip-path: circle(100% at top right);
-  }
-
-  header ul li {
-    padding: 10px 0;
-  }
-
-  header ul li a {
-    color: #fff;
-  }
-
-  header ul li a:hover {
-    background-color: #777;
-  }
-
-  header ul li a.active {
-    background-color: #555;
+    right: 0px;
+    gap: 35px;
+    width: 180px;
+    height: 220px;
+    background-color: #a77932;
+    padding: 45px 10px;
   }
 }
