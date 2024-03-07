@@ -4,16 +4,20 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Arial", sans-serif;
+  height: 100vh;
+  background-color: #4e4e4e;
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  height: 100vh;
-  display: flex;
-  justify-content: start;
-  align-items: flex-start;
+  height: 100%;
   background-color: #f4f4f4;
 }
 
+/* header styles */
 header {
   width: 100%;
   padding: 10px 0;
@@ -41,7 +45,7 @@ header ul {
 }
 
 header a {
-  color: #fff;
+  color: black;
   text-decoration: none;
   padding: 0 10px;
 }
@@ -82,7 +86,129 @@ header a {
     gap: 35px;
     width: 180px;
     height: 220px;
-    background-color: #a77932;
+    background-color: #777;
     padding: 45px 10px;
   }
+}
+
+/* slider styles */
+.navSlides {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #888;
+}
+
+.menuItem {
+  cursor: pointer;
+
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+}
+
+#slider {
+  background-color: #777;
+  overflow: hidden;
+}
+
+.sliderWrapper {
+  display: flex;
+  width: 500vw;
+  transition: all 1s ease-in-out;
+}
+
+.sliderItem {
+  width: 100vw;
+  height: 74.2vh;
+  display: flex;
+  margin-left: 20vw;
+  align-items: center;
+  position: relative;
+}
+
+.slideBg {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.sliderImg {
+  z-index: 1;
+  height: 80%;
+}
+
+.sliderItem:nth-child(1) .slideBg {
+  background-color: rgb(222, 201, 201);
+}
+
+.sliderItem:nth-child(2) .slideBg {
+  background-color: rgb(104, 181, 181);
+}
+
+.sliderItem:nth-child(3) .slideBg {
+  background-color: rgb(175, 151, 200);
+}
+
+.sliderItem:nth-child(4) .slideBg {
+  background-color: rgb(184, 205, 243);
+}
+
+.sliderItem:nth-child(5) .slideBg {
+  background-color: rgb(207, 189, 165);
+}
+
+.selectedItem {
+  color: rgb(150, 50, 50);
+  font-weight: 900;
+}
+
+/* footer styles */
+footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #999;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.importantLinks {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20px;
+}
+
+footer p {
+  font-weight: bold;
+  font-size: large;
+  margin-left: 20px;
+}
+
+footer a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+footer img {
+  width: 32px;
 }
