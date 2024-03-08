@@ -91,6 +91,57 @@ header a {
   }
 }
 
+/* search bar styles */
+.searchBar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+}
+
+#search-bar {
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+#search-bar:focus {
+  outline: none;
+}
+
+#results {
+  z-index: 5;
+  list-style: none;
+  color: black;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+#results li {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#results li:last-child {
+  border-bottom: none;
+}
+
+#results li:hover {
+  background-color: #f5f5f5;
+}
+
 /* slider styles */
 .navSlides {
   display: flex;

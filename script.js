@@ -37,6 +37,37 @@ const products = [
   },
 ];
 
+const searchBar = document.getElementById("search-bar");
+const resultsList = document.getElementById("results");
+
+searchBar.addEventListener("keyup", (e) => {
+  const searchTerm = searchBar.value.toLowerCase();
+  const filteredProducts = products.filter((product) => product.name.toLowerCase().includes(searchTerm));
+
+  if (searchTerm === "") {
+    resultsList.style.display = "none";
+  } else {
+    if (filteredProducts.length > 0) {
+      resultsList.innerHTML = "";
+
+      filteredProducts.forEach((product) => {
+        const item = document.createElement("li");
+        item.textContent = `${product.name} - $${product.price}`;
+        resultsList.appendChild(item);
+      });
+    } else {
+      resultsList.innerHTML = "<li>No products found</li>";
+    }
+    resultsList.style.display = "block";
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target !== searchBar) {
+    resultsList.style.display = "none";
+  }
+});
+
 const mediaQuery = window.matchMedia("(max-width: 768px)");
 
 if (mediaQuery.matches) {
