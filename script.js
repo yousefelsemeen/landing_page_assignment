@@ -52,7 +52,11 @@ searchBar.addEventListener("keyup", (e) => {
 
       filteredProducts.forEach((product) => {
         const item = document.createElement("li");
-        item.textContent = `${product.name} - $${product.price}`;
+        item.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" />
+        <p>${product.name}</p>
+        <p>$${product.price}</p>
+        `;
         resultsList.appendChild(item);
       });
     } else {
